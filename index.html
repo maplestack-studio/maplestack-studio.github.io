@@ -10,7 +10,9 @@
 
   <style>
     body {
+      background-image: url('https://www.transparenttextures.com/patterns/papyrus.png');
       background-color: #d8e2cc;
+      background-repeat: repeat;
       font-family: 'Unica One', sans-serif;
       color: #333;
       margin: 0;
@@ -44,14 +46,22 @@
 
     nav a {
       display: inline-block;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem;
       text-decoration: none;
       color: #5a3e36;
       font-weight: bold;
       font-size: 1.1rem;
+      border: 2px dashed #5a3e36;
+      border-radius: 8px;
+      background-color: #f2e2b3; 
+      box-shadow: 1px 1px 0 #c0b39c;
+      transition: transform 0.1s ease;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      transform: scale(1.05);
+      background-color: #e7b8b1;
     }
   </style>
 </head>
