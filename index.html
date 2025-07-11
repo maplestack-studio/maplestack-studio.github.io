@@ -10,31 +10,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet" />
 
   <style>
-    .hanging-lamp-left {
+  body {
+  margin: 0;
+  padding: 0; /* ← remove extra padding at top */
+  position: relative;
+}
+
+.hanging-lamp-left {
   position: absolute;
   top: 0;
-  left: 2rem;
+  left: 0.5rem;
   z-index: 5;
   pointer-events: none;
 }
 
 .hanging-lamp-left .lamp {
-  width: 60px;
+  width: 40px;
   height: auto;
   transform-origin: top center;
-  animation: swing-left 4s ease-in-out infinite alternate;
+  animation: swing-left 3.5s ease-in-out infinite alternate;
   opacity: 0.9;
 }
 
 @keyframes swing-left {
   0% {
-    transform: rotate(-4deg);
+    transform: rotate(-5deg);
   }
   100% {
-    transform: rotate(4deg);
+    transform: rotate(5deg);
   }
 }
-
     body {
       background-color: #d8e2cc;
       background-image: url(http://www.transparenttextures.com/patterns/natural-paper.png);
