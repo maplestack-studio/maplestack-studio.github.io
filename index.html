@@ -65,24 +65,42 @@
 
     nav a:hover {
       transform: scale(1.05);
-      background-color: #e7b8b1;
+      background-color: #e3c565;
     }
 
     .intro-note {
+      position: relative;
       max-width: 600px;
       margin: 2rem auto;
-      background-image: url(https://www.cleanpng.com/png-paper-white-line-paper-torn-4153697/);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: top center;
-      padding:  3rem 1.5rem 2rem;
+      background-color: #fdf6e3;
+      padding: 2rem;
+      border: 2px dashed #c0b39c;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
       font-size: 1rem;
       line-height: 1.6;
       font-family: 'Georgia', serif;
       color: #4a3e37;
-      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
       border-radius: 12px;
     }
+
+    .tape {
+  position: absolute;
+  width: 60px;
+  height: auto;
+  pointer-events: none;
+}
+
+.tape.top-left {
+  top: -20px;
+  left: -20px;
+  transform: rotate(-15deg);
+}
+
+.tape.bottom-right {
+  bottom: -20px;
+  right: -20px;
+  transform: rotate(15deg);
+}
 
     .intro-note::after {
       content: '';
@@ -118,6 +136,8 @@
 
   <!-- ✅ Intro paragraph styled like torn paper -->
   <div class="intro-note">
+    <img src="https://www.pngall.com/wp-content/uploads/14/Washi-Tape-PNG.png" class="tape top-left" alt="tape" />
+  <img src="https://www.pngall.com/wp-content/uploads/14/Washi-Tape-PNG.png" class="tape bottom-right" alt="tape" />
     <p>
       MapleStack Studio is a cozy little digital space where numbers meet clay, thoughts are handcrafted, and creativity lives in every corner. Whether you're exploring the elegant patterns of math or the textured world of sculpture — you’re warmly welcomed here.
     </p>
