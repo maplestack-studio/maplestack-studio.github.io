@@ -69,6 +69,7 @@
     }
 
     .intro-note {
+      overflow: hidden;
       max-width: 600px;
       margin: 2rem auto;
       background-color: #fdf6e3;
@@ -97,7 +98,30 @@
         #fdf6e3 8px
       );
       z-index: -1;
+      pointer-events: none;
     }
   </style>
 </head>
 <body>
+
+  <!-- ✅ Title with link to homepage -->
+  <h1><a href="index.html">MAPLESTACK STUDIO</a></h1>
+
+  <hr />
+
+  <!-- ✅ Navigation tabs -->
+  <nav>
+    <a href="math-corner.html">📐 Math Corner</a>
+    <a href="clay-gallery.html">🗿 Clay & Sculpting</a>
+  </nav>
+
+  <!-- ✅ Intro paragraph styled like torn paper -->
+  <div class="intro-note">
+    <p>
+      MapleStack Studio is a cozy little digital space where numbers meet clay, thoughts are handcrafted, and creativity lives in every corner. Whether you're exploring the elegant patterns of math or the textured world of sculpture — you’re warmly welcomed here.
+    </p>
+  </div>
+
+</body>
+</html>
+
