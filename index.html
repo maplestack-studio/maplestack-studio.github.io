@@ -19,26 +19,28 @@
       padding: 2rem;
       text-align: center;
     }
-.social-corner {
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  display: flex;
-  gap: 1rem;
-  z-index: 10;
-}
 
-.social-corner a {
-  font-size: 1.4rem;
-  color: #5a3e36;
-  text-decoration: none;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
+    .social-corner {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      z-index: 10;
+    }
 
-  .social-corner a:hover {
-  transform: scale(1.2);
-  color: #b86f64; /* warm accent */
-}
+    .social-corner a {
+      font-size: 1.4rem;
+      color: #5a3e36;
+      text-decoration: none;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .social-corner a:hover {
+      transform: scale(1.2);
+      color: #b86f64;
+    }
+
     h1 {
       font-size: 3rem;
       color: #5a3e36;
@@ -88,7 +90,9 @@
       background-color: #e3c565;
     }
 
-    .intro-note {
+    .intro-note,
+    .donate-box,
+    .newsletter-box {
       position: relative;
       max-width: 600px;
       margin: 2rem auto;
@@ -97,44 +101,89 @@
       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
       font-size: 1rem;
       line-height: 1.6;
-      font-family: 'Georgia', serif;
+      font-family: 'Unica One', sans-serif;
       color: #4a3e37;
       border-radius: 12px;
     }
 
     .tape {
-  position: absolute;
-  width: 70px;
-  height: auto;
-  pointer-events: none;
-}
+      position: absolute;
+      width: 70px;
+      height: auto;
+      pointer-events: none;
+    }
 
-.tape.top-left {
-  top: -20px;
-  left: -20px;
-  transform: rotate(-15deg);
-}
+    .tape.top-left {
+      top: -20px;
+      left: -20px;
+      transform: rotate(-20deg);
+    }
 
-.tape.bottom-right {
-  bottom: -20px;
-  right: -20px;
-  transform: rotate(-20deg);
-}
+    .tape.bottom-right {
+      bottom: -20px;
+      right: -20px;
+      transform: rotate(-20deg);
+    }
 
+    .donate-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: #5a3e36;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border: 2px dashed #5a3e36;
+      border-radius: 8px;
+      background-color: #f2e2b3;
+      box-shadow: 1px 1px 0 #c0b39c;
+      transition: transform 0.1s ease;
+    }
+
+    .donate-button:hover {
+      transform: scale(1.05);
+      background-color: #e3c565;
+    }
+
+    .newsletter-box input[type="email"] {
+      margin-top: 1rem;
+      padding: 0.5rem;
+      border: 1px solid #b6a58c;
+      border-radius: 6px;
+      font-family: 'Unica One', sans-serif;
+      width: 80%;
+      max-width: 300px;
+    }
+
+    .newsletter-box button {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #e7b8b1;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      color: #5a3e36;
+      cursor: pointer;
+      transition: transform 0.1s ease;
+    }
+
+    .newsletter-box button:hover {
+      transform: scale(1.05);
+      background-color: #e3c565;
+    }
   </style>
 </head>
 <body>
   <div class="social-corner">
-  <a href="https://instagram.com/priyal.sheth.11" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-  <a href="https://www.linkedin.com/in/priyal-sheth11/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-  <a href="https://www.youtube.com/@MetanoiaPS" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-</div>
-  
+    <a href="https://instagram.com/priyal.sheth.11" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/priyal-sheth11/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.youtube.com/@MetanoiaPS" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+
   <h1><a href="index.html">MAPLESTACK STUDIO</a></h1>
 
   <hr />
 
- 
   <nav>
     <a href="math-corner.html">📐 Math Corner</a>
     <a href="clay-gallery.html">🗿 Clay & Sculpting</a>
@@ -143,12 +192,32 @@
   <!-- Intro paragraph -->
   <div class="intro-note">
     <img src="https://www.pngall.com/wp-content/uploads/14/Washi-Tape-PNG.png" class="tape top-left" alt="tape" />
-  <img src="https://www.pngall.com/wp-content/uploads/14/Washi-Tape-PNG.png" class="tape bottom-right" alt="tape" />
+    <img src="https://www.pngall.com/wp-content/uploads/14/Washi-Tape-PNG.png" class="tape bottom-right" alt="tape" />
     <p>
       MapleStack Studio is a cozy little digital space where numbers meet clay, thoughts are handcrafted, and creativity lives in every corner. Whether you're exploring the elegant patterns of math or the textured world of sculpture — you’re warmly welcomed here.
     </p>
   </div>
 
+  <!-- Donation Box -->
+  <div class="donate-box">
+    <img src="https://www.pngall.com/wp-content/uploads/14/Washi-Tape-PNG.png" class="tape top-left" alt="tape" />
+    <img src="https://www.pngall.com/wp-content/uploads/14/Washi-Tape-PNG.png" class="tape bottom-right" alt="tape" />
+    <p>
+      If you’d like to support MapleStack Studio, you can donate below.<br>
+      <strong>30% of all donations go to charitable causes.</strong>
+    </p>
+    <a href="donate.html" class="donate-button">🍁 Donate Here</a>
+  </div>
+
+  <!-- Newsletter Subscribe Box -->
+  <div class="newsletter-box">
+    <img src="https://www.pngall.com/wp-content/uploads/14/Washi-Tape-PNG.png" class="tape top-left" alt="tape" />
+    <img src="https://www.pngall.com/wp-content/uploads/14/Washi-Tape-PNG.png" class="tape bottom-right" alt="tape" />
+    <p><strong>Subscribe to our newsletter</strong><br>for cozy updates and new posts!</p>
+    <input type="email" placeholder="Your email address" />
+    <button>Subscribe</button>
+  </div>
 </body>
 </html>
+
 
