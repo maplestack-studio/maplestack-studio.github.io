@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MapleStack Studio</title>
 
-  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet" />
 
   <style>
@@ -30,6 +29,11 @@
       letter-spacing: 0.1em;
     }
 
+    h1 a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     hr {
       width: 60%;
       border: none;
@@ -38,10 +42,10 @@
     }
 
     nav {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
     }
 
     nav a {
@@ -63,16 +67,37 @@
       transform: scale(1.05);
       background-color: #e7b8b1;
     }
+
+    .intro-note {
+      max-width: 600px;
+      margin: 2rem auto;
+      background-color: #fdf6e3;
+      padding: 1.5rem;
+      border: 2px dashed #c0b39c;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+      font-size: 1rem;
+      line-height: 1.6;
+      font-family: 'Georgia', serif;
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro-note::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      background: repeating-linear-gradient(
+        -45deg,
+        #d8e2cc,
+        #d8e2cc 4px,
+        #fdf6e3 4px,
+        #fdf6e3 8px
+      );
+      z-index: -1;
+    }
   </style>
 </head>
 <body>
-  <h1>MAPLESTACK STUDIO</h1>
-
-  <hr />
-
-  <nav>
-    <a href="math-corner.html">📐 Math Corner</a>
-    <a href="clay-gallery.html">🗿 Clay & Sculpting</a>
-  </nav>
-</body>
-</html>
