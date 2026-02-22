@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MapleStack Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    /* 1. Global & Colors */
     :root {
       --sage: #DAE5D0;
       --coffee: #4B3621;
@@ -23,36 +23,36 @@
       justify-content: flex-start;
       min-height: 100vh;
       margin: 0;
-      padding-top: 100px; /* Space for the header items */
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-top: 100px; 
+      font-family: 'Space Mono', monospace; /* Modern Mono for body */
     }
 
-    /* 2. Top Header Items */
     .header-bar {
       position: absolute;
       top: 20px;
-      width: 95%;
+      width: 90%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    #live-clock {
+      font-family: 'VT323', monospace; /* Pixel font for the clock */
+      font-size: 1.2rem;
     }
 
     .socials a {
       color: var(--coffee);
       text-decoration: none;
       margin-left: 15px;
-      font-size: 0.9rem;
     }
 
-    .socials a:hover {
-      text-decoration: underline;
-    }
-
-    /* 3. Title & Buttons */
     h1 {
-      font-size: 3.5rem;
+      font-family: 'VT323', monospace; /* Pixel font for the Title */
+      font-size: 5rem;
       margin-bottom: 30px;
+      text-transform: uppercase;
     }
 
     .nav-container {
@@ -77,7 +77,6 @@
       color: white;
     }
 
-    /* 4. Intro Box with Daisies */
     .intro-box {
       background-color: rgba(255, 255, 255, 0.4);
       border: 2px solid var(--coffee);
@@ -85,23 +84,22 @@
       padding: 40px;
       max-width: 600px;
       width: 85%;
-      position: relative; /* Needed to place daisies in corners */
+      position: relative; 
+      line-height: 1.6;
     }
 
-    /* Simple CSS Daisy Shape */
+    /* Daisy Positioning Fix */
     .daisy {
-  position: absolute;
-  width: 40px;  /* Adjust size as needed */
-  height: 40px;
-  /* This centers the middle of the daisy exactly on the corner line */
-  transform: translate(-50%, -50%); 
-}
+      position: absolute;
+      width: 45px; 
+      height: 45px;
+      transform: translate(-50%, -50%); 
+    }
 
-/* Specific positioning for each corner */
-.top-left { top: 0; left: 0; }
-.top-right { top: 0; right: -40px; } /* right is negative width */
-.bottom-left { bottom: -40px; left: 0; }
-.bottom-right { bottom: -40px; right: -40px; }
+    .top-left { top: 0; left: 0; }
+    .top-right { top: 0; left: 100%; }
+    .bottom-left { top: 100%; left: 0; }
+    .bottom-right { top: 100%; left: 100%; }
 
   </style>
 </head>
@@ -110,8 +108,8 @@
   <div class="header-bar">
     <div id="live-clock">Loading time...</div>
     <div class="socials">
-      <a href="https://instagram.com" target="_blank">Instagram</a>
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">LinkedIn</a>
     </div>
   </div>
 
@@ -123,10 +121,10 @@
   </div>
 
   <div class="intro-box">
-  <img src="daisy.png" class="daisy top-left" alt="daisy">
-  <img src="daisy.png" class="daisy top-right" alt="daisy">
-  <img src="daisy.png" class="daisy bottom-left" alt="daisy">
-  <img src="daisy.png" class="daisy bottom-right" alt="daisy">
+    <img src="daisy.png" class="daisy top-left" alt="daisy">
+    <img src="daisy.png" class="daisy top-right" alt="daisy">
+    <img src="daisy.png" class="daisy bottom-left" alt="daisy">
+    <img src="daisy.png" class="daisy bottom-right" alt="daisy">
 
     <p>
       Welcome to <strong>MapleStack Studio</strong>. This is a creative space where logic meets art. 
@@ -137,21 +135,13 @@
   <script>
     function updateTime() {
       const now = new Date();
-      const options = { 
-        weekday: 'short', 
-        year: 'numeric', 
-        month: 'short', 
-        day: 'numeric',
-        hour: '2-digit', 
-        minute: '2-digit', 
-        second: '2-digit' 
-      };
-      document.getElementById('live-clock').innerHTML = now.toLocaleString('en-US', options);
+      // Simplified time format: Month Day — Hour:Minute:Second
+      const datePart = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+      const timePart = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+      document.getElementById('live-clock').innerHTML = `${datePart} — ${timePart}`;
     }
-
-    // Update every second
     setInterval(updateTime, 1000);
-    updateTime(); // Run immediately on load
+    updateTime();
   </script>
 
 </body>
