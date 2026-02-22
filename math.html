@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math - MapleStack Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sage: #DAE5D0;
+      --coffee: #4B3621;
+      --pastel-yellow: #FFF9C4;
+    }
 
+    body {
+      background-color: var(--sage);
+      color: var(--coffee);
+      font-family: 'Space Mono', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      font-family: 'VT323', monospace;
+      font-size: 4rem;
+      margin-bottom: 10px;
+    }
+
+    .back-home {
+      text-decoration: none;
+      color: var(--coffee);
+      font-weight: bold;
+      margin-bottom: 40px;
+      border-bottom: 2px solid var(--coffee);
+    }
+
+    /* The Grid for your Image-Buttons */
+    .math-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .math-card {
+      text-decoration: none;
+      color: var(--coffee);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .math-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .math-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover; /* Keeps images from looking stretched */
+      border: 3px solid var(--coffee);
+      border-radius: 15px;
+      background-color: white;
+    }
+
+    .math-card span {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="back-home">← Back to Home</a>
+  <h1>Math Studio</h1>
+  <p>Exploring logic and numbers.</p>
+
+  <div class="math-grid">
+    <a href="#fun-problems" class="math-card">
+      <img src="pixelated books.png" alt="Fun Problems">
+      <span>1. Fun Problems</span>
+    </a>
+
+    <a href="#geometry" class="math-card">
+      <img src="pixelated calculator.png" alt="Geometry">
+      <span>2. Geometry / CAG</span>
+    </a>
+
+    <a href="#models" class="math-card">
+      <img src="pixelated computer.png" alt="Cool Models">
+      <span>3. Models & Code</span>
+    </a>
+  </div>
+
+</body>
+</html>
