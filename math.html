@@ -58,13 +58,14 @@
     }
 
     .math-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover; /* Keeps images from looking stretched */
-      border: 3px solid var(--coffee);
-      border-radius: 15px;
-      background-color: white;
-    }
+      width: auto;         /* Let the image keep its natural shape */
+      max-width: 100%;
+      height: 180px;       /* Fixed height to keep the row even */
+      object-fit: contain; /* Ensures the whole art is visible without cropping */
+      border: none;        /* REMOVED: no more brown box */
+      background: none;    /* REMOVED: no more white background */
+      /* filter: drop-shadow(5px 5px 0px rgba(75, 54, 33, 0.2)); */ /* Optional: adds a retro flat shadow */
+    } 
 
     .math-card span {
       display: block;
