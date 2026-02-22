@@ -90,20 +90,18 @@
 
     /* Simple CSS Daisy Shape */
     .daisy {
-      position: absolute;
-      font-size: 24px;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    /* Placing the daisies in the 4 corners */
-    .top-left { top: -15px; left: -15px; }
-    .top-right { top: -15px; right: -15px; }
-    .bottom-left { bottom: -15px; left: -15px; }
-    .bottom-right { bottom: -15px; right: -15px; }
+  position: absolute;
+  width: 40px;  /* Adjust size as needed */
+  height: 40px;
+  /* This centers the middle of the daisy exactly on the corner line */
+  transform: translate(-50%, -50%); 
+}
+
+/* Specific positioning for each corner */
+.top-left { top: 0; left: 0; }
+.top-right { top: 0; right: -40px; } /* right is negative width */
+.bottom-left { bottom: -40px; left: 0; }
+.bottom-right { bottom: -40px; right: -40px; }
 
   </style>
 </head>
@@ -125,10 +123,10 @@
   </div>
 
   <div class="intro-box">
-    <span class="daisy top-left">🌼</span>
-    <span class="daisy top-right">🌼</span>
-    <span class="daisy bottom-left">🌼</span>
-    <span class="daisy bottom-right">🌼</span>
+  <img src="daisy.png" class="daisy top-left" alt="daisy">
+  <img src="daisy.png" class="daisy top-right" alt="daisy">
+  <img src="daisy.png" class="daisy bottom-left" alt="daisy">
+  <img src="daisy.png" class="daisy bottom-right" alt="daisy">
 
     <p>
       Welcome to <strong>MapleStack Studio</strong>. This is a creative space where logic meets art. 
