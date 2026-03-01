@@ -69,7 +69,7 @@
       border-radius: 8px;
       font-weight: bold;
       transition: all 0.3s ease;
-      border: 1px solid #E0D8A0;
+      border: 1px dotted #E0D8A0;
     }
 
     .nav-button:hover {
@@ -79,7 +79,7 @@
 
     .intro-box {
       background-color: rgba(255, 255, 255, 0.4);
-      border: 2px solid var(--coffee);
+      border: 2px dotted var(--coffee);
       border-radius: 15px;
       padding: 40px;
       max-width: 600px;
@@ -87,18 +87,7 @@
       position: relative; 
       line-height: 1.6;
     }
-
-    /* Daisy Positioning Fix */
-    .daisy {
-      position: absolute;
-      width: 50px; 
-      height: 50px;
-      transform: translate(-50%, -50%); 
-    }
-
-    .top-left { top: 0; left: 0; }
-    .bottom-right { top: 100%; left: 100%; }
-
+    
     #totoro {
   position: fixed;
   bottom: 10px;
@@ -127,8 +116,8 @@
   <div class="header-bar">
     <div id="live-clock">Loading time...</div>
     <div class="socials">
-      <a href="#" target="_blank">Instagram</a>
-      <a href="#" target="_blank">LinkedIn</a>
+      <a href="www.instagram.com/priyal.sheth.11" target="_blank">Instagram</a>
+      <a href="www.linkedin.com/in/priyal-sheth11/" target="_blank">LinkedIn</a>
     </div>
   </div>
 
@@ -140,9 +129,6 @@
   </div>
 
   <div class="intro-box">
-    <img src="daisy.png" class="daisy top-left" alt="daisy">
-    <img src="daisy.png" class="daisy bottom-right" alt="daisy">
-
     <p>
       Welcome to <strong>MapleStack Studio</strong>. This is a creative space where logic meets art. 
       Whether we are solving complex equations or shaping clay, we believe in the beauty of the process.
@@ -160,33 +146,17 @@
     setInterval(updateTime, 1000);
     updateTime();
   </script>
-
-  <img src="totoro.gif" id="totoro" alt="Totoro">
-
-  <div class="nav-container">
-    <a href="math.html" class="nav-button">Math</a>
-    <a href="sculpting.html" class="nav-button">Sculpting</a>
-  </div>
-
+  
   <div class="content-wrapper" style="display: flex; flex-direction: column; gap: 30px; align-items: center; width: 100%; padding-bottom: 50px;">
     
-    <div class="intro-box">
-      <img src="daisy.png" class="daisy top-left" alt="daisy">
-      <img src="daisy.png" class="daisy bottom-right" alt="daisy">
-      <p>Welcome to <strong>MapleStack Studio</strong>. This is a creative space where logic meets art. Whether we are solving complex equations or shaping clay, we believe in the beauty of the process.</p>
-    </div>
 
     <div class="intro-box">
-      <img src="daisy.png" class="daisy top-left" alt="daisy">
-      <img src="daisy.png" class="daisy bottom-right" alt="daisy">
       <h3>Support the Studio</h3>
       <p>Your support helps keep the studio running. <strong>30% of all donations go directly to charity.</strong></p>
       <a href="#" class="nav-button" style="display: inline-block; margin-top: 15px;">Donate via PayPal</a>
     </div>
 
     <div class="intro-box">
-      <img src="daisy.png" class="daisy top-left" alt="daisy">
-      <img src="daisy.png" class="daisy bottom-right" alt="daisy">
       <h3>Join the Newsletter</h3>
       <p>Stay updated with my latest math models and sculpting projects.</p>
       <form style="margin-top: 15px;">
