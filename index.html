@@ -8,9 +8,9 @@
 
   <style>
     :root {
-      --sage: #DAE5D0;
+      --sage: #d8e2cc;
       --coffee: #4B3621;
-      --pastel-yellow: #FFF9C4;
+      --pastel-yellow: #fdf6e3;
       --dark-sage: #7A846B;
     }
 
@@ -101,12 +101,24 @@
 
     #totoro {
   position: fixed;
-  bottom: 20px;
+  bottom: 10px;
   right: 20px;
-  width: 100px; /* Adjust size as needed */
-  z-index: 100;
+  width: 120px; /* Adjust size as needed */
+  z-index: 1000;
   pointer-events: none; /* This ensures he doesn't block clicks on buttons */
 }
+    .intro-box h3 {
+      margin-top: 0;
+      font-family: 'VT323', monospace;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+
+    /* Allows the content to scroll if you have many boxes */
+    body {
+      height: auto; 
+      overflow-y: scroll;
+    }
 
   </style>
 </head>
@@ -148,6 +160,42 @@
     setInterval(updateTime, 1000);
     updateTime();
   </script>
+
+  <img src="totoro.gif" id="totoro" alt="Totoro">
+
+  <div class="nav-container">
+    <a href="math.html" class="nav-button">Math</a>
+    <a href="sculpting.html" class="nav-button">Sculpting</a>
+  </div>
+
+  <div class="content-wrapper" style="display: flex; flex-direction: column; gap: 30px; align-items: center; width: 100%; padding-bottom: 50px;">
+    
+    <div class="intro-box">
+      <img src="daisy.png" class="daisy top-left" alt="daisy">
+      <img src="daisy.png" class="daisy bottom-right" alt="daisy">
+      <p>Welcome to <strong>MapleStack Studio</strong>. This is a creative space where logic meets art. Whether we are solving complex equations or shaping clay, we believe in the beauty of the process.</p>
+    </div>
+
+    <div class="intro-box">
+      <img src="daisy.png" class="daisy top-left" alt="daisy">
+      <img src="daisy.png" class="daisy bottom-right" alt="daisy">
+      <h3>Support the Studio</h3>
+      <p>Your support helps keep the studio running. <strong>30% of all donations go directly to charity.</strong></p>
+      <a href="#" class="nav-button" style="display: inline-block; margin-top: 15px;">Donate via PayPal</a>
+    </div>
+
+    <div class="intro-box">
+      <img src="daisy.png" class="daisy top-left" alt="daisy">
+      <img src="daisy.png" class="daisy bottom-right" alt="daisy">
+      <h3>Join the Newsletter</h3>
+      <p>Stay updated with my latest math models and sculpting projects.</p>
+      <form style="margin-top: 15px;">
+        <input type="email" placeholder="Enter your email" style="padding: 10px; border-radius: 5px; border: 1px solid var(--coffee); font-family: 'Space Mono'; width: 200px;">
+        <button type="submit" class="nav-button" style="cursor: pointer;">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
 
   <img src="totoro.gif" id="totoro" alt="Totoro">
 </body>
