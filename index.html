@@ -125,23 +125,11 @@
     <div class="socials">
       <a href="https://www.instagram.com/priyal.sheth.11" target="_blank">Instagram</a>
       <a href="https://www.linkedin.com/in/priyal-sheth11/" target="_blank">LinkedIn</a>
+      <a href="assets/resume.pdf" target="_blank">Resume</a>
     </div>
   </div>
-<!-- Resume Link Button -->
-<div style="margin-top: 15px;">
-  <a href="assets/resume.pdf" target="_blank" class="nav-button" style="
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: var(--pastel-yellow);
-    color: var(--coffee);
-    text-decoration: none;
-    font-weight: bold;
-    border: 2px dashed var(--coffee);
-    border-radius: 8px;
-    font-family: 'Space Mono', monospace;
-    transition: transform 0.2s ease;
-  ">Resume</a>
-</div>
+
+  
   <h1>MapleStack Studio</h1>
 
   <div class="nav-container">
@@ -159,7 +147,7 @@
   <script>
     function updateTime() {
       const now = new Date();
-      // Simplified time format: Month Day — Hour:Minute:Second
+      //Simplified time format: Month Day — Hour:Minute:Second
       const datePart = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
       const timePart = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
       document.getElementById('live-clock').innerHTML = `${datePart} — ${timePart}`;
