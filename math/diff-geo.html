@@ -1,15 +1,125 @@
-<a href="../math.html" class="back-home">← Back to Math Studio</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Differential Geometry - MapleStack Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sage: #DAE5D0;
+      --coffee: #4B3621;
+      --pastel-yellow: #FFF9C4;
+    }
 
+    body {
+      background-color: var(--sage);
+      color: var(--coffee);
+      font-family: 'Space Mono', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 50px 20px;
+    }
 
-<!-- Download button link -->
-<a href="differential-geometry.pdf" download class="download-btn">📥 Download PDF</a>
+    h1 {
+      font-family: 'VT323', monospace;
+      font-size: 4rem;
+      margin-bottom: 10px;
+      text-align: center;
+    }
 
-<!-- Embedded PDF Viewer -->
-<div class="pdf-wrapper">
-  <object data="Differential Geometry (Toroidal Helices).pdf" type="application/pdf">
-    <p style="padding: 20px; text-align: center;">
-      Your browser doesn't support embedded PDFs. 
-      <a href="Differential Geometry (Toroidal Helices).pdf" style="color: var(--coffee); font-weight: bold;">Click here to download and view the file.</a>
+    .back-home {
+      text-decoration: none;
+      color: var(--coffee);
+      font-weight: bold;
+      margin-bottom: 30px;
+      border-bottom: 2px solid var(--coffee);
+    }
+
+    /* Paragraph Box with Dashed Border & Yellow Background */
+    .intro-box {
+      background-color: var(--pastel-yellow);
+      border: 3px dashed var(--coffee);
+      border-radius: 12px;
+      padding: 25px 30px;
+      max-width: 900px;
+      width: 100%;
+      margin-bottom: 35px;
+      line-height: 1.6;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .intro-box h3 {
+      font-family: 'VT323', monospace;
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 8px 16px;
+      background-color: var(--sage);
+      color: var(--coffee);
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px dashed var(--coffee);
+      border-radius: 8px;
+      transition: transform 0.2s ease;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Large Centered PDF Viewer */
+    .pdf-wrapper {
+      width: 100%;
+      max-width: 1000px;
+      height: 950px;
+      border: 3px dashed var(--coffee);
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: white;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 12px rgba(75, 54, 33, 0.15);
+    }
+
+    .pdf-wrapper object {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="../math.html" class="back-home">← Back to Math Studio</a>
+  <h1>Differential Geometry</h1>
+
+  <!-- Yellow Intro Box -->
+  <div class="intro-box">
+    <h3>About This Project</h3>
+    <p>
+      An exploration of differential geometry concepts and toroidal helices. 
+      Read the full paper below or download a local copy to your device.
     </p>
-  </object>
-</div>
+    <a href="Differential Geometry (Toroidal Helices).pdf" download class="download-btn">📥 Download PDF</a>
+  </div>
+
+  <!-- Bigger Centered PDF Embed -->
+  <div class="pdf-wrapper">
+    <object data="Differential Geometry (Toroidal Helices).pdf" type="application/pdf">
+      <p style="padding: 20px; text-align: center;">
+        Your browser doesn't support embedded PDFs. 
+        <a href="Differential Geometry (Toroidal Helices).pdf" style="color: var(--coffee); font-weight: bold;">Click here to download and view the file.</a>
+      </p>
+    </object>
+  </div>
+
+</body>
+</html>
