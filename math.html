@@ -62,16 +62,15 @@
       max-width: 100%;
       height: 180px;       /* Fixed height to keep the row even */
       object-fit: contain; /* Ensures the whole art is visible without cropping */
-      border: none;        /* REMOVED: no more brown box */
-      background: none;    /* REMOVED: no more white background */
-      /* filter: drop-shadow(5px 5px 0px rgba(75, 54, 33, 0.2)); */ /* Optional: adds a retro flat shadow */
+      border: none;        
+      background: none;    
     } 
 
     .math-card:last-child img {
-    height: 120px; /* Reduced from 180px to match the 'vibe' of the others */
-    margin-top: 30px; /* Adds space above it so the text stays aligned */
-    margin-bottom: 30px; 
-}
+      height: 120px; /* Reduced from 180px to match the 'vibe' of the others */
+      margin-top: 30px; /* Adds space above it so the text stays aligned */
+      margin-bottom: 30px; 
+    }
 
     .math-card span {
       display: block;
@@ -94,17 +93,17 @@
 
   <div class="math-grid">
     <a href="#fun-problems" class="math-card">
-      <img src="pixelated books.png" alt="Fun Problems">
+      <img src="assets/pixelated books.png" alt="Fun Problems">
       <span>1. Fun Problems</span>
     </a>
 
-    <a href="#geometry" class="math-card">
-      <img src="pixelated calculator.png" alt="Geometry">
+    <a href="math/diff-geo.html" class="math-card">
+      <img src="assets/pixelated calculator.png" alt="Geometry">
       <span>2. Geometry / CAG</span>
     </a>
 
     <a href="#models" class="math-card">
-      <img src="pixelated computer.png" alt="Cool Models">
+      <img src="assets/pixelated computer.png" alt="Cool Models">
       <span>3. Models & Code</span>
     </a>
   </div>
